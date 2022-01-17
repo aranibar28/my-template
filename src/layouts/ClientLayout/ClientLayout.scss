@@ -1,0 +1,10 @@
+.client-layout {
+  @apply bg-slate-200;
+  .children {
+    @apply flex justify-center items-center;
+    height: calc(100vh - 64px);
+    h1 {
+      @apply font-bold text-center;
+    }
+  }
+}

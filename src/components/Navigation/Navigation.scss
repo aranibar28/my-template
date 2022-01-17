@@ -1,0 +1,54 @@
+.navigation {
+  @apply bg-gray-800 text-white;
+
+  &__container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply flex items-center justify-between h-16;
+
+    &-logo {
+      a {
+        @apply flex items-center;
+        span {
+          @apply text-white text-sm font-medium;
+        }
+      }
+    }
+
+    &-items {
+      @apply hidden md:block;
+      div {
+        @apply px-5 flex items-baseline space-x-4;
+        a {
+          @apply text-gray-300 text-sm font-medium hover:text-teal-400;
+          &.active {
+            @apply text-violet-400;
+          }
+        }
+      }
+    }
+
+    &-toggle {
+      @apply flex md:hidden cursor-pointer;
+      @apply m-1 text-xl;
+    }
+  }
+
+  &__navbar {
+    @apply invisible opacity-0 absolute flex justify-center bg-slate-400 w-full h-1/2;
+    @apply transition-all duration-500;
+    div {
+      @apply flex flex-col justify-center text-center;
+      a {
+        @apply text-white text-sm font-medium p-4;
+      }
+      .active {
+        @apply text-teal-200;
+      }
+    }
+    &.slide-in {
+      @apply visible opacity-100;
+    }
+    &.slide-out {
+    }
+  }
+}
